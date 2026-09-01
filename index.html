@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#2b160d">
-<title>Осенний конкурс операторов — сентябрь 2026</title>
+<title>Осенний конкурс — сентябрь 2026</title>
 <link rel="icon" href="favicon.png">
 <style>
 :root{
@@ -110,7 +110,7 @@ body::after{content:"";position:fixed;inset:0;z-index:-3;background:radial-gradi
     </section>
 
     <section class="section" id="leaders">
-      <div class="section-title"><h2>🧺 Топ-7 урожая</h2><span>Количество успешек · можно менять в data/contest.json</span></div>
+      <div class="section-title"><h2>🧺 Топ-7 урожая</h2><span></span></div>
       <article class="glass board-wrap">
         <div class="board-table" id="board"></div>
         <div class="top7-note">🍄 В каждой строке — своё лукошко; внутри — листья и зелень, а грибочки справа показывают урожай визуально, точное число успешек — справа.</div>
@@ -126,7 +126,7 @@ body::after{content:"";position:fixed;inset:0;z-index:-3;background:radial-gradi
 
     <section class="glass finish">🍁 <b>Удачи всем участникам!</b> Пусть сентябрьский урожай будет самым богатым 🍄</section>
   </main>
-  <footer class="footer">Осенний конкурс операторов · сентябрь 2026 · Собираем урожай успешек</footer>
+  <footer class="footer">Осенний конкурс · сентябрь 2026 · Собираем урожай успешек</footer>
 </div>
 <script>
 const FALLBACK={participants:[
@@ -151,24 +151,8 @@ function renderBoard(data){
   }).join('');
   board.innerHTML='<div class="thead"><span>Место</span><span>Оператор</span><span>Урожай</span><span>Успешки</span></div>'+rows;
 }
-function escapeHtml(s){return String(s??'').replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;',""":'&quot;'}[c]));}
-function parseParticipantsCsv(text){
-  const lines=text.replace(/^\uFEFF/,'').trim().split(/\r?\n/).filter(Boolean);
-  if(!lines.length) throw new Error('CSV empty');
-  const rows=lines.slice(1).map(line=>{
-    const parts=line.split(';');
-    return {name:(parts[0]||'').trim(),successes:Number((parts[1]||'0').trim())||0};
-  }).filter(p=>p.name);
-  return {participants:rows};
-}
-fetch('data/participants.csv?ts='+Date.now(),{cache:'no-store'})
-  .then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.text()})
-  .then(parseParticipantsCsv)
-  .then(renderBoard)
-  .catch(()=>fetch('data/contest.json?ts='+Date.now(),{cache:'no-store'}))
-  .then(r=>{if(r && typeof r.json==='function') return r.json(); if(r) return r; throw new Error('No data')})
-  .then(renderBoard)
-  .catch(()=>renderBoard(FALLBACK));
+function escapeHtml(s){return String(s??'').replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));}
+fetch('data/contest.json?ts='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json()}).then(renderBoard).catch(()=>renderBoard(FALLBACK));
 document.querySelectorAll('.hedgehog-run').forEach(h=>h.addEventListener('animationiteration',()=>{h.classList.toggle('special',Math.random()<0.35)}));
 document.querySelectorAll('.hedgehog-run').forEach(h=>{if(Math.random()<0.35)h.classList.add('special')});
 const canvas=document.getElementById('leaves'),ctx=canvas.getContext('2d');let leaves=[];const colors=['#d85f2e','#f0a43f','#b94b2a','#e0c25f','#8f4a2f'];
