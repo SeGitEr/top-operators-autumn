@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#2b160d">
+<title>Осенний конкурс операторов — сентябрь 2026</title>
+<link rel="icon" href="favicon.png">
+<style>
+:root{
+  --cream:#fff3de;--muted:#d9bea3;--gold:#ffcf67;--orange:#f47c2b;--rust:#b85028;
+  --line:rgba(255,255,255,.20);--glass:rgba(20,27,34,.18);--glass-deep:rgba(8,13,18,.34);
+  --shadow:0 26px 80px rgba(0,0,0,.42)
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;min-height:100vh;color:var(--cream);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;background:#10151a;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:-14px;z-index:-4;background-image:linear-gradient(180deg,rgba(6,12,20,.03),rgba(6,12,20,.24)),url('https://images.unsplash.com/photo-1730929771083-535a3434350d?auto=format&fit=crop&fm=jpg&q=86&w=2400');background-position:center 42%;background-size:cover;background-repeat:no-repeat;filter:saturate(1.12) contrast(1.01) blur(.9px);transform:scale(1.025)}
+body::after{content:"";position:fixed;inset:0;z-index:-3;background:radial-gradient(circle at 70% 24%,rgba(255,255,255,.10),transparent 24%),linear-gradient(180deg,rgba(7,12,18,.02),rgba(7,12,18,.12)),linear-gradient(90deg,rgba(5,10,16,.08),rgba(5,10,16,.00) 48%,rgba(5,10,16,.16));pointer-events:none}
+#leaves{position:fixed;inset:0;z-index:50;pointer-events:none}
+.wrap{width:min(1380px,calc(100% - 34px));margin:auto;padding:16px 0 58px}
+.nav{position:sticky;top:12px;z-index:60;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px;min-height:66px;padding:8px 12px;border:1px solid rgba(255,255,255,.24);border-radius:24px;background:linear-gradient(135deg,rgba(255,255,255,.105),rgba(22,30,38,.15));backdrop-filter:blur(30px) saturate(150%);-webkit-backdrop-filter:blur(30px) saturate(150%);box-shadow:0 18px 55px rgba(0,0,0,.34),inset 0 1px 0 rgba(255,245,225,.08)}
+.brand{display:flex;align-items:center;gap:12px;font-weight:950;font-size:18px}.brand-icon{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(145deg,#ffd36f,#d55b24);box-shadow:0 0 30px rgba(244,116,39,.35)}
+.tabs{display:flex;gap:6px}.tab{padding:11px 18px;border-radius:15px;text-decoration:none;color:#e5d3bd;font-weight:850;border:1px solid transparent;transition:.25s}.tab:hover{background:rgba(255,183,80,.12);color:#fff}.tab.active{color:#fff0d7;border-color:rgba(255,214,142,.34);background:linear-gradient(180deg,rgba(255,193,100,.20),rgba(255,153,57,.07));box-shadow:inset 0 0 28px rgba(255,172,76,.11),0 4px 18px rgba(0,0,0,.14)}
+.season{text-align:right;color:#e6cfb8;font-size:14px}
+.hero{position:relative;isolation:isolate;min-height:400px;margin-top:16px;padding:42px;border:1px solid rgba(255,255,255,.24);border-radius:32px;overflow:hidden;background:linear-gradient(135deg,rgba(255,255,255,.10),rgba(20,28,35,.14));backdrop-filter:blur(32px) saturate(155%);-webkit-backdrop-filter:blur(32px) saturate(155%);box-shadow:var(--shadow),inset 0 1px 0 rgba(255,248,232,.09)}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 78% 25%,rgba(255,255,255,.09),transparent 30%),linear-gradient(180deg,rgba(255,255,255,.025),transparent 45%,rgba(7,12,18,.16));z-index:-1;pointer-events:none}
+.hero-copy{max-width:720px;position:relative;z-index:2}.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:9px 13px;border:1px solid rgba(255,198,110,.34);border-radius:13px;background:rgba(16,23,30,.34);color:#ffdfab;font-size:12px;font-weight:950;letter-spacing:.06em;text-transform:uppercase}.hero h1{font-size:clamp(52px,7vw,84px);line-height:.92;letter-spacing:-.055em;margin:22px 0 14px;background:linear-gradient(100deg,#fff7e8 6%,#ffc965 58%,#f1782d 100%);-webkit-background-clip:text;background-clip:text;color:transparent}.lead{font-size:20px;line-height:1.5;color:#f0dbc2;max-width:690px;margin:0}.date{display:inline-flex;margin-top:24px;padding:11px 16px;border:1px solid rgba(255,199,111,.20);border-radius:999px;background:rgba(9,14,20,.28);color:#f7e2c7}
+.section{margin-top:28px}.section-title{display:flex;justify-content:space-between;align-items:end;gap:12px;margin:0 0 14px;padding:0 2px}.section-title h2{margin:0;font-family:Georgia,serif;font-size:32px;letter-spacing:-.025em}.section-title span{color:#cfb395;font-size:13px}
+.announcement{display:grid;grid-template-columns:1.25fr .75fr;gap:16px}.glass{position:relative;overflow:hidden;border:1px solid rgba(255,255,255,.22);background:linear-gradient(135deg,rgba(255,255,255,.10),rgba(22,30,37,.12));backdrop-filter:blur(30px) saturate(150%);-webkit-backdrop-filter:blur(30px) saturate(150%);border-radius:28px;box-shadow:var(--shadow),inset 0 1px 0 rgba(255,247,231,.07)}.glass::before{content:"";position:absolute;inset:-30%;background:radial-gradient(circle at 24% 22%,rgba(255,255,255,.07),transparent 22%),radial-gradient(circle at 82% 78%,rgba(161,190,214,.06),transparent 24%);filter:blur(22px);animation:glassLight 14s ease-in-out infinite;pointer-events:none}.glass::after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.07),transparent 28%),radial-gradient(circle at 78% 12%,rgba(255,255,255,.07),transparent 25%);pointer-events:none}
+.announcement-main{padding:30px}.announcement-main h3{font-family:Georgia,serif;font-size:38px;line-height:1.02;margin:12px 0 10px}.announcement-main p{margin:0;color:#e0c8b0;line-height:1.72;max-width:860px}.rules{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:22px}.rule{padding:16px;border:1px solid rgba(255,199,116,.14);border-radius:18px;background:rgba(255,255,255,.03)}.rule .ico{font-size:26px}.rule b{display:block;margin-top:9px}.rule span{display:block;margin-top:4px;color:#c9af94;font-size:12px;line-height:1.45}.period{margin-top:18px;padding:13px 16px;border-radius:18px;text-align:center;border:1px solid rgba(255,193,107,.16);background:linear-gradient(90deg,rgba(255,165,58,.08),rgba(255,205,100,.04),rgba(255,165,58,.08));color:#f6dfc2}
+.prizes{padding:24px}.prizes h3{margin:0 0 16px;text-align:center;font-family:Georgia,serif;font-size:28px}.prize-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.prize{padding:16px 9px;border-radius:18px;border:1px solid rgba(255,193,103,.17);background:rgba(255,255,255,.035);text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:flex-start}.prize .mush{position:relative;width:72px;height:72px;margin:0 auto 2px;animation:mush 3s ease-in-out infinite;filter:drop-shadow(0 8px 16px rgba(255,160,40,.22));transform-origin:50% 88%}.prize .mush .cap{position:absolute;left:50%;top:5px;transform:translateX(-50%);width:60px;height:37px;border-radius:50% 50% 42% 42% / 72% 72% 38% 38%;background:linear-gradient(150deg,var(--cap-hi) 2%,var(--cap-mid) 48%,var(--cap-lo) 100%);box-shadow:inset 0 3px 4px rgba(255,255,255,.34),inset 0 -9px 12px rgba(0,0,0,.18),0 0 18px var(--glow)}.prize .mush .cap:before{content:"";position:absolute;left:8px;right:8px;bottom:4px;height:8px;border-radius:50%;background:linear-gradient(180deg,rgba(255,250,225,.92),rgba(255,255,255,.18));box-shadow:0 0 0 1px rgba(255,255,255,.16)}.prize .mush .cap:after{content:"";position:absolute;left:14px;top:7px;width:9px;height:6px;border-radius:50%;background:rgba(255,255,255,.86);box-shadow:18px 3px 0 rgba(255,255,255,.68),30px -1px 0 rgba(255,255,255,.72),9px 13px 0 rgba(255,255,255,.36)}.prize .mush .stem{position:absolute;left:50%;bottom:8px;transform:translateX(-50%);width:24px;height:35px;border-radius:45% 45% 34% 34% / 20% 20% 26% 26%;background:linear-gradient(90deg,var(--stem-lo),var(--stem-hi) 42%,#fff4d1 52%,var(--stem-hi) 62%,var(--stem-lo));box-shadow:inset 2px 0 3px rgba(255,255,255,.3),inset -4px 0 6px rgba(0,0,0,.16)}.prize .mush .base{position:absolute;left:50%;bottom:3px;transform:translateX(-50%);width:44px;height:11px;border-radius:50% 50% 44% 44%;background:linear-gradient(90deg,var(--base-lo),var(--base-hi) 45%,#ffe3a0 55%,var(--base-lo));box-shadow:0 3px 7px rgba(0,0,0,.3),inset 0 2px 2px rgba(255,255,255,.3)}.prize .mush .stem:after{content:"";position:absolute;left:50%;bottom:4px;transform:translateX(-50%);width:18px;height:7px;border-radius:50%;background:rgba(255,255,255,.18)}.mush-gold{--cap-hi:#fff0a3;--cap-mid:#f0b52f;--cap-lo:#ad6813;--stem-hi:#ffe8a0;--stem-lo:#bc7818;--base-hi:#f8c94a;--base-lo:#8d5414;--glow:rgba(255,194,65,.44);transform:scale(1.16)}.mush-silver{--cap-hi:#ffffff;--cap-mid:#cfd7df;--cap-lo:#7e8994;--stem-hi:#f2f5f7;--stem-lo:#9ca7b0;--base-hi:#dfe5ea;--base-lo:#7d8790;--glow:rgba(214,226,238,.30);transform:scale(1.0)}.mush-bronze{--cap-hi:#ffd0a3;--cap-mid:#c77a3c;--cap-lo:#7a3a18;--stem-hi:#e9a467;--stem-lo:#8d4c25;--base-hi:#d88a4b;--base-lo:#733817;--glow:rgba(219,125,64,.34);transform:scale(.88)}.prize:nth-child(1) .mush{animation-delay:0s}.prize:nth-child(2) .mush{animation-delay:.25s}.prize:nth-child(3) .mush{animation-delay:.5s}.prize b{display:block;margin-top:4px}.prize strong{display:block;color:#ffd06e;font-size:24px;margin-top:4px}.prizes-note{text-align:center;color:#d1b99f;line-height:1.5;margin-top:15px;font-size:13px}
+.board-wrap{padding:18px;border-radius:28px;border:1px solid rgba(255,255,255,.20);background:linear-gradient(135deg,rgba(255,255,255,.08),rgba(16,24,31,.12));backdrop-filter:blur(26px) saturate(145%);-webkit-backdrop-filter:blur(26px) saturate(145%);box-shadow:var(--shadow),inset 0 1px 0 rgba(255,248,233,.06)}.board-table{border:1px solid rgba(255,210,151,.17);border-radius:22px;overflow:hidden;background:rgba(10,15,21,.16)}.thead,.tr{display:grid;grid-template-columns:62px minmax(260px,1.15fr) minmax(240px,1fr) 92px;align-items:center;gap:14px}.thead{padding:12px 14px;color:#cbb197;font-size:12px;background:rgba(255,176,67,.045)}.tr{min-height:82px;padding:10px 14px;border-top:1px solid rgba(255,194,103,.12);transition:.24s}.tr:hover{background:rgba(255,174,66,.055);transform:translateX(2px)}.rank{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;font-weight:950;background:rgba(255,175,65,.08);border:1px solid rgba(255,192,89,.19)}.tr:nth-child(2) .rank{background:linear-gradient(145deg,#ffd86c,#e87320);color:#401906;box-shadow:0 0 22px rgba(255,167,54,.23)}
+.person{display:flex;align-items:center;gap:12px;min-width:0}.person-name{font-weight:900;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.basket-wrap{display:flex;align-items:center;gap:10px;min-width:0}.basket{font-size:32px;filter:drop-shadow(0 5px 8px rgba(0,0,0,.45));animation:bob 3.4s ease-in-out infinite;flex:none}.mushrooms{display:flex;gap:2px;min-width:0;overflow:hidden}.mushrooms span{font-size:18px;opacity:.96;animation:pop .8s both}.count{text-align:right;font-size:18px;font-weight:950;color:#ffd16e;white-space:nowrap}.top7-note{padding:10px 2px 4px;color:#c7ae93;font-size:12px}
+.hedgehogs{position:relative;height:126px;margin-top:7px;overflow:hidden}.hedgehog{position:absolute;bottom:1px;font-size:74px;filter:drop-shadow(0 10px 13px rgba(0,0,0,.55));animation:walk 6s ease-in-out infinite}.hedgehog.left{left:3%}.hedgehog.right{right:3%;animation-delay:1.8s;transform:scaleX(-1)}.ground{position:absolute;left:0;right:0;bottom:0;height:32px;background:linear-gradient(180deg,transparent,rgba(40,17,7,.8));border-radius:50%}
+.finish{margin-top:2px;padding:20px 24px;text-align:center;font-size:18px;background:linear-gradient(135deg,rgba(255,255,255,.075),rgba(16,24,31,.13))}.finish b{color:#ffd16c}.footer{text-align:center;color:#ad9278;font-size:12px;margin-top:26px}
+@keyframes glassLight{0%,100%{transform:translate3d(-2%,0,0) scale(1)}50%{transform:translate3d(2%,-1.5%,0) scale(1.03)}}@keyframes mush{50%{transform:translateY(-4px) rotate(-2deg)}}@keyframes bob{50%{transform:translateY(-3px) rotate(2deg)}}@keyframes pop{from{opacity:0;transform:translateY(5px) scale(.72)}to{opacity:1;transform:none}}@keyframes walk{0%,100%{transform:translateX(0)}50%{transform:translateX(30px)}}
+@media(max-width:1000px){.nav{grid-template-columns:1fr auto}.season{display:none}.hero{min-height:430px}.announcement{grid-template-columns:1fr}.thead,.tr{grid-template-columns:54px minmax(220px,1fr) minmax(190px,1fr) 84px}}
+@media(max-width:700px){.wrap{width:min(100% - 18px,1380px)}.nav{grid-template-columns:1fr}.tabs{justify-content:center;flex-wrap:wrap}.hero{padding:28px;min-height:420px}.hero h1{font-size:clamp(44px,12vw,66px)}.lead{font-size:17px}.rules{grid-template-columns:1fr}.prize-grid{grid-template-columns:repeat(3,1fr)}.section-title{align-items:start;flex-direction:column}.section-title span{font-size:12px}.thead{display:none}.tr{grid-template-columns:46px 1fr auto;gap:11px;min-height:78px;padding:11px}.basket-wrap{grid-column:2;grid-row:2}.count{grid-column:3;grid-row:1 / span 2}.person-name{font-size:15px}.basket{font-size:27px}.mushrooms span{font-size:16px}.hedgehog{font-size:58px}.prize strong{font-size:19px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}#leaves{display:none}}
+</style>
+<!-- Фон: фотография осеннего лесного озера с домиком, Unsplash License. -->
+</head>
+<body>
+<canvas id="leaves" aria-hidden="true"></canvas>
+<div class="wrap">
+  <header class="nav">
+    <div class="brand"><span class="brand-icon">🍄</span><span>Конкурс операторов</span></div>
+    <nav class="tabs" aria-label="Навигация">
+      <a class="tab active" href="index.html">🍁 Осенний конкурс</a>
+      <a class="tab" href="previous.html">🏆 Предыдущий конкурс</a>
+    </nav>
+    <div class="season">🍂 Осень 2026</div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow">🍂 СЕНТЯБРЬ 2026 · ОСЕННИЙ МАРАФОН</div>
+        <h1>Осенний конкурс<br>операторов</h1>
+        <p class="lead">Собираем урожай успешек! В сентябре считаем только успешки: больше собрал — выше поднялся в рейтинге.</p>
+        <div class="date">📅 Период: 1–30 сентября 2026</div>
+      </div>
+    </section>
+
+    <section class="section" id="rules">
+      <div class="section-title"><h2>🍄 Анонс конкурса</h2><span>Просто, честно и по-осеннему</span></div>
+      <div class="announcement">
+        <article class="glass announcement-main">
+          <div class="eyebrow">Условия</div>
+          <h3>Собираем урожай успешек</h3>
+          <p>Весь сентябрь главный показатель — <b>количество успешек</b>. Не учитываем продуктивные часы, количество звонков и конверсию: на них могут влиять технические обстоятельства, доступность звонков, количество смен и другие факторы.</p>
+          <div class="rules">
+            <div class="rule"><div class="ico">🍄</div><b>1 успешка = 1 гриб</b><span>Каждая успешка увеличивает твой урожай.</span></div>
+            <div class="rule"><div class="ico">🧺</div><b>Собираем весь месяц</b><span>Итог — общее количество успешек с 1 по 30 сентября.</span></div>
+            <div class="rule"><div class="ico">🏆</div><b>Топ-7 на виду</b><span>Каждую неделю показываем семь лучших результатов.</span></div>
+          </div>
+          <div class="period">🍁 Побеждает тот, кто соберёт самый большой урожай успешек</div>
+        </article>
+        <aside class="glass prizes">
+          <h3>🍂 Призы 🍂</h3>
+          <div class="prize-grid">
+            <div class="prize"><div class="mush mush-gold" aria-hidden="true"><span class="cap"></span><span class="stem"></span><span class="base"></span></div><b>1 место</b><strong>1 500 ₽</strong></div>
+            <div class="prize"><div class="mush mush-silver" aria-hidden="true"><span class="cap"></span><span class="stem"></span><span class="base"></span></div><b>2 место</b><strong>1 000 ₽</strong></div>
+            <div class="prize"><div class="mush mush-bronze" aria-hidden="true"><span class="cap"></span><span class="stem"></span><span class="base"></span></div><b>3 место</b><strong>500 ₽</strong></div>
+          </div>
+          <div class="prizes-note">Три призовых места.<br>4–7 места остаются в итоговом топе без денежного приза.</div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="leaders">
+      <div class="section-title"><h2>🧺 Топ-7 урожая</h2><span>Количество успешек · можно менять в data/contest.json</span></div>
+      <article class="glass board-wrap">
+        <div class="board-table" id="board"></div>
+        <div class="top7-note">🍄 В каждой строке — своё лукошко; грибочки показывают урожай визуально, точное число успешек — справа.</div>
+      </article>
+    </section>
+
+    <div class="hedgehogs" aria-hidden="true">
+      <div class="hedgehog left">🦔</div><div class="hedgehog right">🦔</div><div class="ground"></div>
+    </div>
+
+    <section class="glass finish">🍁 <b>Удачи всем участникам!</b> Пусть сентябрьский урожай будет самым богатым 🍄</section>
+  </main>
+  <footer class="footer">Осенний конкурс операторов · сентябрь 2026 · Собираем урожай успешек</footer>
+</div>
+<script>
+const FALLBACK={participants:[
+  {name:'Участник 1',successes:0,gender:'woman'},{name:'Участник 2',successes:0,gender:'man'},
+  {name:'Участник 3',successes:0,gender:'woman'},{name:'Участник 4',successes:0,gender:'man'},
+  {name:'Участник 5',successes:0,gender:'woman'},{name:'Участник 6',successes:0,gender:'man'},
+  {name:'Участник 7',successes:0,gender:'woman'}
+]};
+function renderBoard(data){
+  const board=document.getElementById('board');
+  const sorted=[...(Array.isArray(data?.participants)?data.participants:FALLBACK.participants)].sort((a,b)=>Number(b.successes)-Number(a.successes)).slice(0,7);
+  const rows=sorted.map((p,i)=>{
+    const n=Math.min(10,Math.max(0,Math.round(Number(p.successes||0)/10)));
+    const icons=Array.from({length:n},(_,j)=>`<span style="animation-delay:${j*65}ms">🍄</span>`).join('');
+    return `<div class="tr">
+      <span class="rank">${i+1}</span>
+      <div class="person"><span class="person-name">${escapeHtml(p.name)}</span></div>
+      <div class="basket-wrap"><span class="basket">🧺</span><span class="mushrooms">${icons||'<span>·</span>'}</span></div>
+      <span class="count">${Number(p.successes||0)}</span>
+    </div>`;
+  }).join('');
+  board.innerHTML='<div class="thead"><span>Место</span><span>Оператор</span><span>Урожай</span><span>Успешки</span></div>'+rows;
+}
+function escapeHtml(s){return String(s??'').replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));}
+fetch('data/contest.json?ts='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json()}).then(renderBoard).catch(()=>renderBoard(FALLBACK));
+const canvas=document.getElementById('leaves'),ctx=canvas.getContext('2d');let leaves=[];const colors=['#d85f2e','#f0a43f','#b94b2a','#e0c25f','#8f4a2f'];
+function resize(){canvas.width=innerWidth;canvas.height=innerHeight}resize();addEventListener('resize',resize);
+for(let i=0;i<38;i++) leaves.push({x:Math.random()*innerWidth,y:Math.random()*innerHeight,vy:.22+Math.random()*.62,vx:(Math.random()-.5)*.55,a:Math.random()*6.28,da:(Math.random()-.5)*.028,s:5+Math.random()*9,c:colors[i%colors.length]});
+function draw(){ctx.clearRect(0,0,canvas.width,canvas.height);for(const p of leaves){p.y+=p.vy;p.x+=p.vx+Math.sin(p.y/110)*.18;p.a+=p.da;if(p.y>canvas.height+18){p.y=-18;p.x=Math.random()*canvas.width}ctx.save();ctx.translate(p.x,p.y);ctx.rotate(p.a);ctx.globalAlpha=.38;ctx.fillStyle=p.c;ctx.beginPath();ctx.ellipse(0,0,p.s*.9,p.s*.43,.5,0,Math.PI*2);ctx.fill();ctx.restore()}requestAnimationFrame(draw)}draw();
+</script>
+</body>
+</html>

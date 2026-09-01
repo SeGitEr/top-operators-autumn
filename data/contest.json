@@ -1,0 +1,21 @@
+{
+  "title": "Осенний конкурс операторов",
+  "subtitle": "Собираем урожай успешек!",
+  "period": "1–30 сентября 2026",
+  "resultsDate": "Итоги: 01.09.2026",
+  "metric": "успешки",
+  "prizes": [
+    {"place": 1, "amount": "1 500 ₽", "mushroom": "🍄"},
+    {"place": 2, "amount": "1 000 ₽", "mushroom": "🍄"},
+    {"place": 3, "amount": "500 ₽", "mushroom": "🍄"}
+  ],
+  "participants": [
+  {"name": "Иванов Иван", "successes": 42},
+  {"name": "Степанова Дарья", "successes": 37},
+  {"name": "Петров Алексей", "successes": 31},
+  {"name": "Сидорова Анна", "successes": 28},
+  {"name": "Кузнецов Максим", "successes": 24},
+  {"name": "Орлова Мария", "successes": 19},
+  {"name": "Волков Дмитрий", "successes": 14}
+]
+}

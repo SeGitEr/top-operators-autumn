@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#020611">
+<title>Предыдущий конкурс — Конкурс операторов</title>
+<link rel="icon" href="favicon.png">
+<style>
+:root{--bg:#020711;--line:rgba(150,170,220,.18)}*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;min-height:100vh;overflow-x:hidden;background:radial-gradient(900px 650px at 8% 15%,rgba(105,54,255,.25),transparent 65%),radial-gradient(850px 650px at 96% 52%,rgba(18,192,255,.13),transparent 64%),linear-gradient(180deg,#020611,#020713 60%,#01040c);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;color:#fff}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background-image:linear-gradient(rgba(117,140,190,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(117,140,190,.025) 1px,transparent 1px);background-size:56px 56px;mask-image:linear-gradient(to bottom,black,transparent 85%)}
+.ambient{position:fixed;width:420px;height:420px;border-radius:50%;filter:blur(110px);opacity:.12;pointer-events:none;animation:ambient 12s ease-in-out infinite}.a1{background:#7138ff;left:-190px;top:150px}.a2{background:#00cfff;right:-190px;top:560px;animation-delay:-5s}.a3{background:#ff8b38;left:38%;bottom:-280px;opacity:.045;animation-delay:-8s}@keyframes ambient{50%{transform:translate3d(28px,-22px,0) scale(1.06)}}
+.wrap{width:min(1460px,calc(100% - 64px));margin:18px auto 60px;position:relative;z-index:1}.poster{position:relative;margin-top:18px;border:1px solid rgba(143,164,232,.22);border-radius:28px;overflow:hidden;background:#020611;box-shadow:0 28px 100px rgba(0,0,0,.5),0 0 80px rgba(102,74,255,.09);animation:posterIn .7s ease both}.poster img{display:block;width:100%;height:auto}.poster:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(115deg,transparent 20%,rgba(255,255,255,.035) 48%,transparent 62%);background-size:220% 100%;animation:sheen 8s ease-in-out infinite}.hotspot{position:absolute;z-index:2;display:block;border-radius:22px}.hotspot.autumn{left:37%;top:1.8%;width:17%;height:6.5%}.hotspot.previous{left:51.5%;top:1.8%;width:17.5%;height:6.5%}.hotspot.season{right:1%;top:1.8%;width:15%;height:6.5%}@keyframes posterIn{from{opacity:0;transform:translateY(12px) scale(.995)}to{opacity:1;transform:none}}@keyframes sheen{0%,60%{background-position:120% 0}75%,100%{background-position:-20% 0}}
+@media(max-width:900px){.wrap{width:min(100% - 24px,1460px);margin-top:12px}.poster{border-radius:22px}}
+@media(max-width:620px){.wrap{width:calc(100% - 12px)}.poster{margin-top:12px;border-radius:16px}.poster:after{animation:none}.hotspot{border-radius:12px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important}}
+</style>
+</head>
+<body>
+<div class="ambient a1"></div><div class="ambient a2"></div><div class="ambient a3"></div>
+<main class="wrap">
+<section class="poster" aria-label="Итоги предыдущего конкурса">
+<img src="assets/previous-contest.png" alt="Итоги конкурса операторов за август 2026 года">
+<a class="hotspot autumn" href="index.html" aria-label="Перейти к осеннему конкурсу"></a>
+<a class="hotspot previous" href="previous.html" aria-label="Предыдущий конкурс"></a>
+<span class="hotspot season" aria-hidden="true"></span>
+</section>
+</main>
+</body>
+</html>
