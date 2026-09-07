@@ -10,12 +10,12 @@
     {"place": 3, "amount": "500 ₽", "mushroom": "🍄"}
   ],
   "participants": [
-  {"name": "Иванов Иван", "successes": 42},
-  {"name": "Степанова Дарья", "successes": 37},
-  {"name": "Петров Алексей", "successes": 31},
-  {"name": "Сидорова Анна", "successes": 28},
-  {"name": "Кузнецов Максим", "successes": 24},
-  {"name": "Орлова Мария", "successes": 19},
-  {"name": "Волков Дмитрий", "successes": 14}
+  {"name": "Субботин Сергей", "successes": 65},
+  {"name": "Бутасова Кристина", "successes": 35},
+  {"name": "Паладыч Анастасия", "successes": 27},
+  {"name": "Храмова Луиза", "successes": 26},
+  {"name": "Кривонос Роман", "successes": 23},
+  {"name": "Салахатдинова Алиса", "successes": 21},
+  {"name": "Риттер Артём", "successes": 21}
 ]
 }
